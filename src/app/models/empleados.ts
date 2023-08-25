@@ -5,10 +5,10 @@ export class empleadosBD{
         public nombreDepartamento: String,
         public anioEnLaEmpresa: number,
         public salarioE: number,
-        public correoA: String,
-        public telefonoA: String,
-        public fotoA: String,
-        public estadoA: boolean
+        public correoE: String,
+        public telefonoE: String,
+        public fotoE: String,
+        public estadoE: boolean
 
     ){}
 
