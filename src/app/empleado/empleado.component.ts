@@ -36,7 +36,7 @@ export class EmpleadoComponent implements OnInit{
 
   ngOnInit(){
     console.log("OnInit Ejecutado")
-
+    this.inicializarEmpleados();
   }
 
   private inicializarEmpleados(){
