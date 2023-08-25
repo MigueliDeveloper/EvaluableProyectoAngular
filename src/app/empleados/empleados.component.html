@@ -1,1 +1,14 @@
-<p>empleados works!</p>
+<div id="empleadosContainer">
+
+    <div class="empleadosFicha">
+        <h1 class="empleadosEnunciado">Ficha de los Jefes de la Empresa</h1>
+
+
+        <div *ngFor="let empleados of empleadosAll">
+            <h3 class="nombresJefes">{{ empleados.nombre }} {{ empleados.apellidos}}</h3>
+            <p class="atributosJefes">Nombre Departamento: {{ empleados.nombreDepartamento }}</p>
+            <p class="atributosJefes">Estado De la Tarea: {{empleados.estadoDeLaTarea}}</p>
+        </div>
+    </div>
+</div>
+

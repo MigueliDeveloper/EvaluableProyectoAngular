@@ -1,1 +1,13 @@
-<p>tareas works!</p>
+<div id="tareasContainer">
+
+    <div class="tareasFicha">
+        <h1 class="tareasEnunciado">Ficha de los Jefes de la Empresa</h1>
+
+
+        <div *ngFor="let tareas of tareasAll">
+            <h3 class="idTareas">{{ tareas.id}} </h3>
+            <p class="nombreTareas">Nombre Tareas: {{ tareas.nombre}}</p>
+            <p class="descripcionTareas">Descripcion Tareas: {{ tareas.descripcion}}</p>
+        </div>
+    </div>
+</div>

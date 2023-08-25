@@ -11,6 +11,7 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { JefeComponent } from './jefe/jefe.component';
 import { TareaComponent } from './tarea/tarea.component';
 import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
+import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso
     EmpleadoComponent,
     JefeComponent,
     TareaComponent,
-    FormularioAccesoComponent
+    FormularioAccesoComponent,
+    FormularioRegistroComponent
   ],
   imports: [
     BrowserModule,

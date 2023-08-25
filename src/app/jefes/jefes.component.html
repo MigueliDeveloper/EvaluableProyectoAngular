@@ -1,1 +1,13 @@
-<p>jefes works!</p>
+<div id="jefesContainer">
+
+    <div class="jefesFicha">
+        <h1 class="jefesEnunciado">Ficha de los Jefes de la Empresa</h1>
+
+
+        <div *ngFor="let jefes of jefesAll">
+            <h3 class="nombresJefes">{{ jefes.nombreJ }} {{ jefes.edadJ}}</h3>
+            <p class="atributosJefes">Nombre Departamento: {{ jefes.nombreDepartamentoJ }}</p>
+            <p class="atributosJefes">Area Especialización: {{ jefes.areaEspecializacionJ}}</p>
+        </div>
+    </div>
+</div>
