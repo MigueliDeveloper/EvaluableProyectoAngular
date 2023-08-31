@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ModelsComponent } from './models/models.component';
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { JefesComponent } from './jefes/jefes.component';
 import { TareasComponent } from './tareas/tareas.component';
@@ -12,11 +11,12 @@ import { JefeComponent } from './jefe/jefe.component';
 import { TareaComponent } from './tarea/tarea.component';
 import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
+import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
+import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModelsComponent,
     EmpleadosComponent,
     JefesComponent,
     TareasComponent,
@@ -24,7 +24,9 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
     JefeComponent,
     TareaComponent,
     FormularioAccesoComponent,
-    FormularioRegistroComponent
+    FormularioRegistroComponent,
+    GestionServiciosComponent,
+    ListaServiciosComponent
   ],
   imports: [
     BrowserModule,
