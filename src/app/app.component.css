@@ -1,5 +1,5 @@
 *{
-    padding: 25px;
+  padding: 25px;
 
 }
 
@@ -12,29 +12,29 @@
 }
 
 #containerInicio nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 #containerInicio nav ul{
-    list-style: none;
-    display: flex;
-    padding: 12px; 
+  list-style: none;
+  display: flex;
+  padding: 12px;
 }
 
 #container nav ul li{
-    list-style: none;
-    margin-right: 20px;
-    color: #333;
-    text-align: center;
-    padding: 2px 4px;
-    text-decoration: none;
+  list-style: none;
+  margin-right: 20px;
+  color: #333;
+  text-align: center;
+  padding: 2px 4px;
+  text-decoration: none;
 }
 
 #container nav li a:hover{
-   color: #333;
-   background-color: #ddd;
+  color: #333;
+  background-color: #ddd;
 }
 
