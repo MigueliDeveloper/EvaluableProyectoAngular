@@ -14,9 +14,10 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
 import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     EmpleadosComponent,
     JefesComponent,
@@ -27,12 +28,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormularioAccesoComponent,
     FormularioRegistroComponent,
     GestionServiciosComponent,
-    ListaServiciosComponent
-  ],
+    ListaServiciosComponent,
+
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HeaderComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
