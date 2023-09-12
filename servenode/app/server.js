@@ -1,24 +1,37 @@
 const express = require('express')
+const mongoose = require('mongoose')
+const conectarDB = require('./config/db')
+const cors = require("cors")
 
+// Creamos el servidor
 const app = express()
 
-const port = 3700
-
-app.listen(port,() =>{
-    console.log('La aplicación está en línea....')
-})
-const userRouters = require('./app/routes/user')
-
-app.use(userRouters)
+// const port = 3700
+// app.get('/', (req, res) =>{
+//     res.send('Servidor en linea por pantalla...')
+// })
+// const cursoRouters = require( './app/routes/server')
+// app.use(curosRouters)
 
 // Conexión con Base datos
-const mongoose = require('mongoose')
+// mongoose.Promise = global.Promise
+// mongoose.connect('mongodb://127.0.0.1:27017/Appweb', {
+//     useNewUrlParser: true,
+// })
+// .then(() => {
+//     console.log("Conexión establecida...")
+// })
+// .catch(err => console.log(err))
 
-mongoose.Promise = global.Promise
-mongoose.connect('mongodb://127.0.0.1:27017/myAngularv', {
-    useNewUrlParser: true,
+// Conectamos DB Cursos
+conectarDB();
+
+app.use(cors())
+
+app.use(express.json());
+
+app.use('/api/usuarios', require('./app/usuariosroutes'));
+
+app.listen(3700, () => {
+    console.log('El servidor esta corrinedo perfectamente')
 })
-.then(() => {
-    console.log("Conexión establecida...")
-})
-.catch(err => console.log(err))
