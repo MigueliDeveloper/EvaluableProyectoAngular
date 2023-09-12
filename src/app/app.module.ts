@@ -13,6 +13,7 @@ import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ListaServiciosComponent } from './lista-servicios/lista-servicios.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
