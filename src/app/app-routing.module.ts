@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-
 import { EmpleadosComponent } from './empleados/empleados.component';
 import { JefesComponent } from './jefes/jefes.component';
 import { TareasComponent } from './tareas/tareas.component';
@@ -21,7 +20,7 @@ const routes: Routes = [
   children: [{path: 'gestionServicios', component: GestionServiciosComponent}]
   },
   { path: 'header', component:HeaderComponent },
-  { path: 'footer', componet: FooterComponent}
+  { path: 'footer', component: FooterComponent},
 
 ];
 
