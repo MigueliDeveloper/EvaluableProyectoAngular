@@ -9,15 +9,20 @@ import { JefesComponent } from './jefes/jefes.component';
 import { TareasComponent } from './tareas/tareas.component';
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: '', component: JefesComponent},
   { path: 'empleados', component: EmpleadosComponent },
   { path: 'jefes', component: JefesComponent },
-  { path: 'tareas', component: TareasComponent }, 
-  { path: 'listaServicios', component: ListaServiciosComponent, 
+  { path: 'tareas', component: TareasComponent },
+  { path: 'listaServicios', component: ListaServiciosComponent,
   children: [{path: 'gestionServicios', component: GestionServiciosComponent}]
   },
+  { path: 'header', component:HeaderComponent },
+  { path: 'footer', componet: FooterComponent}
+
 ];
 
 @NgModule({

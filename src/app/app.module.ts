@@ -15,6 +15,7 @@ import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [	
@@ -29,6 +30,7 @@ import { HeaderComponent } from './header/header.component';
     FormularioRegistroComponent,
     GestionServiciosComponent,
     ListaServiciosComponent,
+    FooterComponent,
 
    ],
   imports: [

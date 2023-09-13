@@ -3,6 +3,36 @@
 
 }
 
+*{
+  padding: 12px;
+
+}
+
+body{
+
+  margin: 0;
+
+  background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.my-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+
+}
+
+.my-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #888888;
+  background-color: #0D3F7C;
+  color: #CDEAE8;
+}
+
 #containerInicio {
   background-color: #00214A;
   color: #fff;
