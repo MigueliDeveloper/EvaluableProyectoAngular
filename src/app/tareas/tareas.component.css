@@ -1,0 +1,7 @@
+#tareasContainer {
+
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+
+}
