@@ -15,10 +15,11 @@ import { ListaServiciosComponent } from './lista-servicios/lista-servicios.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     EmpleadosComponent,
     JefesComponent,
@@ -31,8 +32,8 @@ import { FooterComponent } from './footer/footer.component';
     GestionServiciosComponent,
     ListaServiciosComponent,
     FooterComponent,
-    HeaderComponent
-   
+    HeaderComponent,
+      CrearCursoComponent
    ],
   imports: [
     BrowserModule,
