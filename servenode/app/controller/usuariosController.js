@@ -6,7 +6,8 @@ exports.crearUsuarios = async(req, res) => {
 		// Creamos nuestro usuario
 		usuario = new Usuarios(req.body);
 		await curso.save();
-        res.send(curso);
+		// Cambiado por curso
+        res.send(tarea);
 
 	}catch(error){
 		console.log(error);
@@ -26,17 +27,18 @@ exports.obtenerUsuarios = async(req, res) => {
 
 exports.actualizarUsuarios = async (req, res) => {
 	try {
-		const { nombre, descripcion, categoria, duracion, temas} = req.body;
+		const { _id, userName, CodeOfTheTaskToBePerformed , DescriptionofTheTaskToBePerformed, Score, State} = req.body;
 		let usuarios = await Usuarios.findById(req.params.id);
-		if(!curso) {
+		//Cambiado por curso
+		if(!tarea) {
 			res.status(404).json({ msg: 'No existe el Usuario' })
 		} 
-		usuarios.name = nameUsuarios;
-		usuarios.description = description;
-		usuarios.category = category;
-		usuarios.duracion = duracion;
-		usuarios.temas = temas;
-		usuarios.image = image;
+		usuarios._id = _id;
+		usuarios.userName = userName;
+		usuarios.CodeOfTheTaskToBePerformed = CodeOfTheTaskToBePerformed;
+		usuarios.DescriptionofTheTaskToBePerformed = DescriptionofTheTaskToBePerformed;
+		usuarios.Score = Score;
+		usuarios.State = State;
 
 		usuarios = await Usuarios.findOneAndUpdate({ _id: req.params.id }, curso, { new: true} )
 		res.json(usuarios);
@@ -73,7 +75,6 @@ exports.eliminarUsarios = async (req, res) => {
         console.log(error);
         res.status(500).send('Hubo un error');
     }
-
 }
 
 

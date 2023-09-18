@@ -1,31 +1,33 @@
 const mongoose = require('mongoose');
 
 const UsuariosSchema = mongoose.Schema({
-    name: {
+    _id: {
         type: String,
         required: true
     },
-    descripcion: {
+    userName: {
         type: String,
         required: true
     },
-    category: {
+    //Código de la tarea a realizar
+    CodeOfTheTaskToBePerformed: {
         type: String,
         required: true
     },
-    duracion: {
-        type: Number,
-        required: true
-    },
-    temas: {
+    DescriptionofTheTaskToBePerformed: {
         type: String,
         required: true
     },
-    image: {
+    //Puntuación
+    Score: {
+        type: numer,
+        required: true
+    },
+    // Estado
+    State: {
         type: String,
         required: true
     }
 });
 
-module.exports = mongoose.model('Usuarios', CursoSchema);
-
+module.exports = mongoose.model('Usuarios', UsuariosSchema);

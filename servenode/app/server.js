@@ -31,6 +31,9 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/usuarios', require('./app/usuariosroutes'));
+app.use('/api/tareas', require('./app/tareasroutes'));
+app.use('/api/lstServicios', require('lstServiciosroutes'));
+
 
 app.listen(3700, () => {
     console.log('El servidor esta corrinedo perfectamente')
