@@ -16,10 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CrearCursoComponent } from './crear-curso/crear-curso.component';
+import { CrearTareaComponent } from './crear-tarea/crear-tarea.component';
 
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     EmpleadosComponent,
     JefesComponent,
@@ -33,7 +34,8 @@ import { CrearCursoComponent } from './crear-curso/crear-curso.component';
     ListaServiciosComponent,
     FooterComponent,
     HeaderComponent,
-      CrearCursoComponent
+      CrearCursoComponent,
+      CrearTareaComponent
    ],
   imports: [
     BrowserModule,
