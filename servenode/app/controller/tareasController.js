@@ -47,7 +47,7 @@ exports.actualizarTareas = async (req, res) => {
     }
 }
 
-exports.eliminaTareas = async(req, res) => {
+exports.eliminarTareas = async(req, res) => {
 	try {
 
         let tareas = await Tareas.findById(req.params.id);

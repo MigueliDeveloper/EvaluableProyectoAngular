@@ -1,7 +1,7 @@
 // Rutas para curso
 const express = require('express');
 const router = express.Router();
-const lstServiciosController = require('../controllers/lstServiciosController');
+const lstServiciosController = require('../controller/lstServiciosController');
 
 // api/usuarios
 router.post('/', lstServiciosController.crearlstServicios);

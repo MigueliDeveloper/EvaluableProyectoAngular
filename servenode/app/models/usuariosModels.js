@@ -20,7 +20,7 @@ const UsuariosSchema = mongoose.Schema({
     },
     //Puntuación
     Score: {
-        type: numer,
+        type: Number,
         required: true
     },
     // Estado

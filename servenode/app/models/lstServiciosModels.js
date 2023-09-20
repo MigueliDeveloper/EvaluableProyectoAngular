@@ -15,15 +15,15 @@ const lstServiciosSchema = mongoose.Schema({
         required: true
     },
     PrecioSer: {
-        type: number,
+        type: Number,
         required: true
     },
     imagenSer: {
-        type: string,
+        type: String,
         required: true
     },
     stockSer: {
-        type: boolean,
+        type: Boolean,
         required: true
     }
 });

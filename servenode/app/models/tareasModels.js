@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const TareasSchema = mongoose.Schema({
     _id: {
-        type: number,
+        type: Number,
         required: true
     },
     nombre: {
@@ -15,17 +15,17 @@ const TareasSchema = mongoose.Schema({
         required: true
     },
     tareaIniciada: {
-        type: boolean,
+        type: Boolean,
         required: true
     },
     //Puntuación
     tareaPendiente: {
-        type: boolean,
+        type: Boolean,
         required: true
     },
     // Estado
     tareaFinalizada: {
-        type: boolean,
+        type: Boolean,
         required: true
     }
 });
