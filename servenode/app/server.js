@@ -18,9 +18,9 @@ app.listen(3001, () => {
 
 })
 
-app.use('/api/usuarios', require('./app/usuariosroutes'));
-app.use('/api/tareas', require('./app/tareasroutes'));
-app.use('/api/lstServicios', require('lstServiciosroutes'));
+app.use('/api/usuarios', require('./routes/usuariosroutes'));
+app.use('/api/tareas', require('./routes/tareasroutes'));
+app.use('/api/lstServicios', require('./routes/lstServiciosroutes'));
 
 
 app.listen(3700, () => {

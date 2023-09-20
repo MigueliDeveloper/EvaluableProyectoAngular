@@ -1,7 +1,7 @@
 // Rutas para curso
 const express = require('express');
 const router = express.Router();
-const cursoController = require('../controllers/usuariosController');
+const usuariosController = require('../controllers/usuariosController');
 
 // api/usuarios
 router.post('/', usuariosController.crearUsuarios);

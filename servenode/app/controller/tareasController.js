@@ -6,7 +6,7 @@ exports.crearTareas = async(req, res) => {
 		// Creamos nuestra tarea
 		tarea = new Tareas(req.body);
 		await curso.save();
-        res.send(empleado);
+        res.send(tarea);
 
 	}catch(error){
 		console.log(error);
@@ -27,13 +27,12 @@ exports.obtenerTareas = async(req, res) => {
 
 exports.actualizarTareas = async (req, res) => {
 	try {
-		const { _id, nombre, descripcion, tareaIniciada, tareaPendiente, tareaFinalizada} = req.body;
+		const { nombre, descripcion, tareaIniciada, tareaPendiente, tareaFinalizada} = req.body;
 		let tareas = await Tareas.findById(req.params.id);
 		if(!empleado) {
 			res.status(404).json({ msg: 'No existe la Tarea' })
 		} 
 
-        tareas._id = _id;
         tareas.nombre = nombre;
         tareas.descripcion = descripcion;
         tareas.tareaIniciada = tareaIniciada;

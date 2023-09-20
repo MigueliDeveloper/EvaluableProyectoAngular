@@ -7,7 +7,7 @@ exports.crearlstServicios = async(req, res) => {
         lstServicio = new lstServicios(req.body);
         await curso.save();
         // Puse tarea pero puede ser cliente
-        res.send(tarea);
+        res.send(lstServicio);
 
     }catch(error){
 		console.log(error);
@@ -76,6 +76,5 @@ exports.eliminarlstServicios = async (req, res) => {
         console.log(error);
         res.status(500).send('Hubo un error');
     }
-
 }
 

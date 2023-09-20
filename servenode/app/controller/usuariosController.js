@@ -1,4 +1,4 @@
-const Usuarios = require('../models/usuariosModel');
+const Usuarios = require('../models/usuariosModels');
 
 exports.crearUsuarios = async(req, res) => {
 	try{
@@ -7,7 +7,7 @@ exports.crearUsuarios = async(req, res) => {
 		usuario = new Usuarios(req.body);
 		await curso.save();
 		// Cambiado por curso
-        res.send(tarea);
+        res.send(usuario);
 
 	}catch(error){
 		console.log(error);
@@ -27,13 +27,13 @@ exports.obtenerUsuarios = async(req, res) => {
 
 exports.actualizarUsuarios = async (req, res) => {
 	try {
-		const { _id, userName, CodeOfTheTaskToBePerformed , DescriptionofTheTaskToBePerformed, Score, State} = req.body;
+		const { userName, CodeOfTheTaskToBePerformed , DescriptionofTheTaskToBePerformed, Score, State} = req.body;
 		let usuarios = await Usuarios.findById(req.params.id);
 		//Cambiado por curso
 		if(!tarea) {
 			res.status(404).json({ msg: 'No existe el Usuario' })
 		} 
-		usuarios._id = _id;
+	
 		usuarios.userName = userName;
 		usuarios.CodeOfTheTaskToBePerformed = CodeOfTheTaskToBePerformed;
 		usuarios.DescriptionofTheTaskToBePerformed = DescriptionofTheTaskToBePerformed;
