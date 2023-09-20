@@ -13,11 +13,6 @@ app.use(cors())
 
 app.use(express.json());
 
-app.listen(3001, () => {
-    console.log('El servidor está en servicio correctamente');
-
-})
-
 app.use('/api/usuarios', require('./routes/usuariosroutes'));
 app.use('/api/tareas', require('./routes/tareasroutes'));
 app.use('/api/lstServicios', require('./routes/lstServiciosroutes'));
