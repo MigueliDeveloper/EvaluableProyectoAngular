@@ -14,11 +14,11 @@ export class CrearTareaComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private gestionMensaje: GestionMensaje){ // Inyectar FormBuilder
   this.crearForm = this.fb.group({
-    name: ['', Validators.required],
-    durarion: ['', [Validators.required, Validators.email]],
-    description: ['', [Validators.required, Validators.minLength(20)]],
-    category: ['', [Validators.required, Validators.minLength(8)]],
-    fotoPortada: ['']
+    nombre: ['', Validators.required],
+    descripcion: ['', [Validators.required, Validators.email]],
+    tareaIniciada: ['', [Validators.required, Validators.minLength(20)]],
+    tareaPendiente: ['', [Validators.required, Validators.minLength(8)]],
+    tareaFinalizada: ['']
 
   });
 }
@@ -27,7 +27,7 @@ export class CrearTareaComponent implements OnInit {
     
   }
 
-  onSubmit() {
+  onSubmit(tareaForm) {
     const mensaje = new GestionMensaje(
       
       this.crearForm.value.name,

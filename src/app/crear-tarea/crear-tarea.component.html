@@ -1,24 +1,24 @@
 <!-- <form [formGroup]="crearForm" (ngSubmit)="onSubmit()"> -->
-<form (ngSubmit)="onSubmit()">   
+<form #tareaForm="ngForm" (ngSubmit)="onSubmit(tareaForm)">   
   <div class="form-group">
-    <label for="name">Nombre</label>
-    <input type="text" formControlName="name" class="form-control">
+    <label for="nombre">Nombre</label>
+    <input type="text" placeholder="Nombre de la tarea" formControlName="nombre" class="form-control">
   </div>
   <div class="form-group">
-    <label for="duration">Duración</label>
-    <input type="number" formControlName="duration" class="form-control">
+    <label for="descripcion">Descripción</label>
+    <textarea formControlName="descripcion" class="form-control"></textarea>
   </div>
   <div class="form-group">
-    <label for="description">Descripción</label>
-    <textarea formControlName="description" class="form-control"></textarea>
+    <label for="tareaIniciada">Tarea Iniciada</label>
+    <input type="text" formControlName="tareaIniciada" class="form-control">
   </div>
   <div class="form-group">
-    <label for="category">Categoría</label>
-    <input type="text" formControlName="category" class="form-control">
+    <label for="tareaPendiente">Tarea Pendiente</label>
+    <input type="file" formControlName="tareaPendiente" class="form-control">
   </div>
   <div class="form-group">
-    <label for="fotoPortada">Foto de portada</label>
-    <input type="file" formControlName="fotoPortada" class="form-control">
+    <label for="tareaFinalizada">Tarea Finalizada</label>
+    <input type="file" formControlName="tareaFinalizada" class="form-control">
   </div>
   <button type="submit" class="btn btn-primary">Crear tarea</button>
 </form>
