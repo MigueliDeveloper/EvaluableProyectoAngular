@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms'; 
+import {ActivatedRoute, Router} from '@angular/router'
+import { ToastrService } from 'ngx-toastr'
+// Servicio - Modelo
 import { GestionMensaje } from '../models/gestion-mensaje';
+import { GestionmensajeService } from '../servicios/gestion-mensaje.service';
 
 @Component({
   selector: 'app-crear-tarea',
@@ -9,50 +13,10 @@ import { GestionMensaje } from '../models/gestion-mensaje';
 })
 
 export class CrearTareaComponent implements OnInit {
-  crearForm: FormGroup;  // Definir FormGroup para el formulario reactivo
+
+  tareaForm: 
 
 
-  constructor(private fb: FormBuilder, private gestionMensaje: GestionMensaje){ // Inyectar FormBuilder
-  this.crearForm = this.fb.group({
-    nombre: ['', Validators.required],
-    descripcion: ['', [Validators.required, Validators.email]],
-    tareaIniciada: ['', [Validators.required, Validators.minLength(20)]],
-    tareaPendiente: ['', [Validators.required, Validators.minLength(8)]],
-    tareaFinalizada: ['']
 
-  });
 }
  
-  ngOnInit(): void{
-    
-  }
-
-  onSubmit(tareaForm) {
-    const mensaje = new GestionMensaje(
-      
-      this.crearForm.value.name,
-      this.crearForm.value.duration,
-      this.crearForm.value.description,
-      this.crearForm.value.category,
-      this.crearForm.value.fotoPortada
-    );
-    
-    // this.gestionMensaje.guardar(mensaje).subscribe((data) => {
-    //   // La tarea se ha creado correctamente.
-    // }, (error) => {
-    //   // Ha ocurrido un error al crear la tarea.
-    // });
-  }
-
-  }
-  
-  // submitForm(){
-  //   if(this.registrationForm.valid) {
-  //     console.log('Formulario enviado:');
-  //     console.log('Nombre:', this.registrationForm.value.nombreR);
-  //     console.log('Email', this.registrationForm.value.email);
-  //     console.log('Contraseña:', this.registrationForm.value.contrasenaR);
-  //   }
-  // }
-
-
