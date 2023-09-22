@@ -1,70 +1,37 @@
 <!-- <form [formGroup]="crearForm" (ngSubmit)="onSubmit()"> -->
-<form #tareaForm="ngForm" (ngSubmit)="onSubmit(tareaForm)">   
-  <div class="form-group">
-    <label for="nombre">Nombre</label>
-    <input type="text" placeholder="Nombre de la tarea" formControlName="nombre" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="descripcion">Descripción</label>
-    <textarea formControlName="descripcion" class="form-control"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="tareaIniciada">Tarea Iniciada</label>
-    <input type="text" formControlName="tareaIniciada" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="tareaPendiente">Tarea Pendiente</label>
-    <input type="file" formControlName="tareaPendiente" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="tareaFinalizada">Tarea Finalizada</label>
-    <input type="file" formControlName="tareaFinalizada" class="form-control">
-  </div>
-  <button type="submit" class="btn btn-primary">Crear tarea</button>
-</form>
-
- <!--  -->
-
 <div class="container mt-15">
   <div class="row">
       <div class="col-lg-12">
           <div class="card">
               <div class="card-body text-center">
                   <span class="titulo">{{ titulo | uppercase }}</span>
-                  <form class="mb-3" [formGroup]="cursoForm" (ngSubmit)="agregarCurso()">
+                  <form class="mb-3" [formGroup]="tareaForm" (ngSubmit)="agregarTarea()">
                       <div class="mb-3">
                           <input type="text" formControlName="nombre" class="form-control" placeholder="Curso">
-                          <div class="text-danger" *ngIf="cursoForm.get('nombre')?.hasError('required') && cursoForm.get('nombre')?.touched">
+                          <div class="text-danger" *ngIf="tareaForm.get('nombre')?.hasError('required') && tareaForm.get('nombre')?.touched">
                               <span>El nombre es obligatorio</span>
                           </div>
                       </div>
                       <div class="mb-3">
                           <input type="text" formControlName="descripcion" class="form-control" placeholder="Descripción">
-                          <div class="text-danger" *ngIf="cursoForm.get('descripcion')?.hasError('required') && cursoForm.get('descripcion')?.touched">
+                          <div class="text-danger" *ngIf="tareaForm.get('descripcion')?.hasError('required') && tareaForm.get('descripcion')?.touched">
                               <span>La descripción es obligatoria</span>
                           </div>
                       </div>
                       <div class="mb-3">
-                          <input type="text" formControlName="categoria" class="form-control" placeholder="Categoría">
-                          <div class="text-danger" *ngIf="cursoForm.get('categoria')?.hasError('required') && cursoForm.get('categoria')?.touched">
-                              <span>La Categoría es obligatoria</span>
-                          </div>
+                          <input type="text" formControlName="tareaIniciada" class="form-control" placeholder="Tarea Iniciada">
+                          
                       </div>
                       <div class="mb-3">
-                          <input type="number" formControlName="duracion" class="form-control" placeholder="Duración">
-                          <div class="text-danger" *ngIf="cursoForm.get('duracion')?.hasError('required') && cursoForm.get('duracion')?.touched">
-                              <span>La duración es obligatoria</span>
-                          </div>
+                          <input type="number" formControlName="tareaPendiente" class="form-control" placeholder="Tarea Pendiente">
+                         
                       </div>
                       <div class="mb-3">
-                          <input type="text" formControlName="temas" class="form-control" placeholder="Temas">
-                          <div class="text-danger" *ngIf="cursoForm.get('temas')?.hasError('required') && cursoForm.get('temas')?.touched">
-                              <span>Los temas son obligatorios</span>
-                          </div>
+                          <input type="text" formControlName="tareaFinalizada" class="form-control" placeholder="Tarea Finalizada">
                       </div>
                       <div class="mb-3">
                           <button class="btn btn-secondary float-start" routerLink="/">VOLVER</button>
-                          <button type="submit" [disabled]="cursoForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
+                          <button type="submit" [disabled]="tareaForm.invalid" class="btn btn-success float-end">ACEPTAR</button>
                       </div>
                   </form>
               </div>

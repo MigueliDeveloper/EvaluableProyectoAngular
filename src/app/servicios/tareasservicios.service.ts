@@ -7,7 +7,7 @@ import { tareasBD } from '../models/tareas';
     providedIn: 'root'
 
 })
-export class TareasserviciosService {
+export class Tareasservicios {
 
     url = 'http://localhost:3700/api/tareas'
 
@@ -21,7 +21,7 @@ constructor( private http: HttpClient) { }
         return this.http.delete(this.url + id);
     }
 
-    guardarTareas(tarea: TareasserviciosService): Observable<any>{
+    guardarTareas(tarea: tareasBD): Observable<any>{
         return this.http.post(this.url, tarea)
     }
 
@@ -29,7 +29,7 @@ constructor( private http: HttpClient) { }
         return this.http.get(this.url+ id);
     }
 
-    editarTareas (id: string, tarea: TareasserviciosService): Observable<any>{
+    editarTareas(id: string, tarea: tareasBD): Observable<any>{
         return this.http.put(this.url + id, tarea);
     }
 
