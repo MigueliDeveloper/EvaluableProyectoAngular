@@ -7,9 +7,10 @@ import { EmpleadosComponent } from './empleados/empleados.component';
 import { JefesComponent } from './jefes/jefes.component';
 import { TareasComponent } from './tareas/tareas.component';
 import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
-import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TareaComponent } from './tarea/tarea.component';
+import { CrearTareaComponent } from './crear-tarea/crear-tarea.component';
 
 const routes: Routes = [
   { path: '', component: JefesComponent},
@@ -17,8 +18,10 @@ const routes: Routes = [
   { path: 'jefes', component: JefesComponent },
   { path: 'tareas', component: TareasComponent },
   { path: 'listaServicios', component: ListaServiciosComponent,
-  children: [{path: 'gestionServicios', component: GestionServiciosComponent}]
+  // children: [{path: 'gestionServicios', component: GestionServiciosComponent}]
   },
+  { path: 'Tarea', component: TareaComponent},
+  { path: 'crearTarea', component: CrearTareaComponent},
   { path: 'header', component:HeaderComponent },
   { path: 'footer', component: FooterComponent},
 

@@ -3,11 +3,11 @@
     <div class="tareasFicha">
         <h1 class="tareasEnunciado">Ficha de las Tareas de la Empresa</h1>
 
-
         <div *ngFor="let tareas of tareasAll">
-            <h3 class="idTareas">{{ tareas.id}} </h3>
+            <h3 class="idTareas">{{ tareas._id}} </h3>
             <p class="nombreTareas">Nombre Tareas: {{ tareas.nombre}}</p>
             <p class="descripcionTareas">Descripcion Tareas: {{ tareas.descripcion}}</p>
         </div>
+        <button><a routerLink="/crearTarea">Nueva Tarea</a></button>
     </div>
 </div>

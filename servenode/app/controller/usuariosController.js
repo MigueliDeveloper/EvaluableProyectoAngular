@@ -69,7 +69,7 @@ exports.eliminarUsuarios = async (req, res) => {
 		if(!usuarios){
 			res.status(404).json({ msg: 'No existe los Usuarios'})
 		}
-		await Curso.findOneAndRemove({ _id: req.params.id })
+		await Usuarios.findOneAndRemove({ _id: req.params.id })
         res.json({ msg: 'Curso eliminado con exito' });       
     } catch (error) {
         console.log(error);

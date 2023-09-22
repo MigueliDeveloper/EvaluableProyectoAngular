@@ -1,7 +1,11 @@
 #tareasContainer {
-
+    width: 40vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 80px;
+    background-color: lightcoral;
+    margin-left: 80vh;
+    margin-top: 20vh;
 
 }

@@ -5,7 +5,7 @@ exports.crearTareas = async(req, res) => {
 		let tarea;
 		// Creamos nuestra tarea
 		tarea = new Tareas(req.body);
-		await curso.save();
+		await tarea.save();
         res.send(tarea);
 
 	}catch(error){
@@ -29,7 +29,7 @@ exports.actualizarTareas = async (req, res) => {
 	try {
 		const { nombre, descripcion, tareaIniciada, tareaPendiente, tareaFinalizada} = req.body;
 		let tareas = await Tareas.findById(req.params.id);
-		if(!empleado) {
+		if(!tareas) {
 			res.status(404).json({ msg: 'No existe la Tarea' })
 		} 
 
@@ -54,7 +54,7 @@ exports.eliminarTareas = async(req, res) => {
         if(!tareas){
 			res.status(404).json({ msg: 'No existe las Tareas'})
 		}
-		await Curso.findOneAndRemove({ _id: req.params.id })
+		await Tareas.findOneAndRemove({ _id: req.params.id })
         res.json({ msg: 'Tarea eliminada con exito' });   
     } catch (error) {
         console.log(error);

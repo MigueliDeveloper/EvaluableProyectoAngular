@@ -2,11 +2,11 @@ export class tareasBD{
     public _id?: string
     public nombre: string
     public descripcion: string
-    public tareaIniciada: boolean
-    public tareaPendiente : boolean
-    public tareaFinalizada: boolean
+    public tareaIniciada: string
+    public tareaPendiente : string
+    public tareaFinalizada: string
 
-    constructor(nombre: string, descripcion: string, tareaIniciada: boolean, tareaPendiente : boolean, tareaFinalizada: boolean){
+    constructor(nombre: string, descripcion: string, tareaIniciada: string, tareaPendiente : string, tareaFinalizada: string){
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.tareaIniciada = tareaIniciada;
